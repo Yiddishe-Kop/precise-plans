@@ -31392,6 +31392,31 @@ html {
   scroll-behavior: smooth;
 }
 
+.mobile-nav a:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+}
+
+.mobile-nav a {
+  border-radius: 0.375rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mobile-nav a:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.mobile-nav a {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .form-label {
   display: block;
   font-weight: 700;

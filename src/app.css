@@ -27,6 +27,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.mobile-nav a {
+  @apply px-4 py-2 transition rounded-md hover:bg-gray-800 focus:ring-1;
+}
+
 .form-label {
   @apply block text-sm font-bold;
 }
