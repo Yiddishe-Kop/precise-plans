@@ -1,29 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/static/app.css">
   <title>Precise Plans</title>
 </head>
+
 <body class="bg-gray-100">
+  <header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4">
+    <img src="/static/img/logo.png" alt="Precise Plans" class="h-12">
+    <nav class="flex items-center space-x-3 text-white uppercase">
+      <a href="#top">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact Us</a>
+      <a href="tel:9211212233" class="px-2 py-1 bg-blue-400 rounded-md">92 1121 2233</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
   <section class="relative h-screen bg-center bg-cover" style="background-image: url(/static/img/hero.jpg)">
-    <div class="absolute inset-0" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4))">
+    <div class="absolute inset-0 flex items-center justify-center"
+      style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4))">
+      <div class="text-center">
+        <p class="text-4xl text-blue-400">Welcome To</p>
 
-      <header class="flex items-center justify-between px-6 py-4">
-        <img src="/static/img/logo.png" alt="Precise Plans" class="w-12 h-12">
-        <nav class="flex items-center space-x-3 text-white uppercase">
-          <a href="#top">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#services">Services</a>
-          <a href="#how">How it works</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#contact">Contact Us</a>
-          <a href="tel:9211212233" class="px-2 py-1 bg-blue-400 rounded-md">92 1121 2233</a>
-        </nav>
-      </header>
+        <h1 class="mt-4 font-bold text-white text-7xl">Precise Plans</h1>
+        <div class="mt-12">
+          <button class="px-4 py-2 text-sm font-bold text-white bg-blue-400 rounded-md">
+            Play Video
+          </button>
+        </div>
+      </div>
 
+      <aside class="absolute top-0 bottom-0 right-0 flex flex-col items-center justify-center px-8 space-y-6">
+        <a href="#instagram">
+          <img src="/static/img/instagram.png" target="_blank" alt="Instagram" class="w-7">
+        </a>
+        <a href="#linkedin">
+          <img src="/static/img/linkedin.png" target="_blank" alt="linkedin" class="w-7">
+        </a>
+      </aside>
     </div>
   </section>
+
+  <!-- About -->
+  <section>
+
+    <h1 id="about" class="py-12 text-3xl text-center text-blue-400 uppercase bg-white">About Us</h1>
+    <div class="grid sm:grid-cols-2">
+      <img src="/static/img/lounge.png" class="object-cover w-full h-full">
+      <div class="px-8 py-20 bg-gray-100">
+        <article class="max-w-xl mx-auto space-y-3 leading-relaxed">
+          <p>Historically, when building, renovating or extending your home, you looked at the floor plans on paper or a
+            screen and had to imagine and visualize how the plans would translate to real size.</p>
+          <h4 class="py-4 text-2xl font-bold text-blue-400">Not anymore.</h4>
+          <p>Precise Plans state of the art technology allows you to walk through your floor plans in real life on a 1:1
+            life size scale, accurately experiencing the size and feel of each room in a tangible way and providing the
+            opportunity to seamlessly make any necessary changes to the plans in advance. Imagine seeing the layout of
+            your room,</p>
+          <ul>
+            <li>Filled with real furniture</li>
+            <li>Allowing you to make informed decisions with 20:20 vision from a foresight vantage point and create your
+              reality before a tool has been lifted.</li>
+          </ul>
+          <p>
+            No more agonizing deliberations and sleepless nights filled with regret over costly changes to the plans you
+            wish you would have made in hindsight.
+          </p>
+          <p>Let us provide you with the peace of mind that your floor plans are perfect, and precise.</p>
+          <h4 class="pt-4 text-2xl font-bold text-blue-400">Welcome to Precise Plans.</h4>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section>
+    <h1 id="services" class="py-12 text-3xl text-center text-blue-400 uppercase bg-white">Our Services</h1>
+    <div class="px-6 py-20 text-center text-white bg-black sm:px-10">
+      <ul class="grid gap-8 md:grid-cols-3">
+        <li>
+          <img src="/static/img/services/1.png" class="w-full rounded-md">
+          <h4 class="text-xl text-blue-500 uppercase my-7">Homeowners</h4>
+          <p>For clients refurbishing, extending or building from scratch, to provide the clarity and peace of mind they desire!</p>
+        </li>
+        <li>
+          <img src="/static/img/services/2.png" class="w-full rounded-md">
+          <h4 class="text-xl text-blue-500 uppercase my-7">Proffessionals</h4>
+          <p>For interior designers, architects, builders and developers to tangibly showcase and demonstrate their work!</p>
+        </li>
+        <li>
+          <img src="/static/img/services/3.png" class="w-full rounded-md">
+          <h4 class="text-xl text-blue-500 uppercase my-7">Commercial</h4>
+          <p>Maximize space and efficiency for your commercial setting to achieve optimal results!</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="text-center bg-white">
+    <h1 id="how" class="py-12 text-3xl text-blue-400 uppercase">How It Works</h1>
+    <ul class="grid gap-6 px-8 pb-12 sm:px-10 md:px-16 sm:grid-cols-2 lg:grid-cols-4">
+      <li class="flex flex-col items-center justify-center h-full p-8 transition rounded-md bg-blue-50 hover:bg-blue-100">
+        <img src="/static/img/icons/send.png" class="w-16">
+        <h3 class="my-8 text-xl font-bold uppercase">Step 1</h3>
+        <p>Contact us so we can assess your needs.</p>
+      </li>
+      <li class="flex flex-col items-center justify-center h-full p-8 transition rounded-md bg-blue-50 hover:bg-blue-100">
+        <img src="/static/img/icons/time.png" class="w-16">
+        <h3 class="my-8 text-xl font-bold uppercase">Step 2</h3>
+        <p>Send us your plans and book a time for your appointment.</p>
+      </li>
+      <li class="flex flex-col items-center justify-center h-full p-8 transition rounded-md bg-blue-50 hover:bg-blue-100">
+        <img src="/static/img/icons/list.png" class="w-16">
+        <h3 class="my-8 text-xl font-bold uppercase">Step 3</h3>
+        <p>We prepare the plans for your walk-through session.</p>
+      </li>
+      <li class="flex flex-col items-center justify-center h-full p-8 transition rounded-md bg-blue-50 hover:bg-blue-100">
+        <img src="/static/img/icons/heart.png" class="w-16">
+        <h3 class="my-8 text-xl font-bold uppercase">Step 4</h3>
+        <p>Experience the design and make the changes you want.</p>
+      </li>
+    </ul>
+  </section>
 </body>
+
 </html>
