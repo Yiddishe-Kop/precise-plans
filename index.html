@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/static/app.css">
+
   <script src="/static/app.js"></script>
   <title>Precise Plans</title>
 </head>
 
 <body class="bg-gray-100">
-  <header x-data="{ open: false }"
-    class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 shadow"
-    style="backdrop-filter: blur(10px); background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4))">
-    <img src="/static/img/logo.png" alt="Precise Plans" class="h-12">
+  <header x-data="{ open: false }" id="header"
+    class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 shadow header">
+    <a href="#top"><img src="/static/img/logo.png" alt="Precise Plans" class="h-12"></a>
     <nav class="items-center hidden space-x-4 text-white uppercase lg:flex">
       <a href="#top">Home</a>
       <a href="#about">About Us</a>
@@ -200,63 +200,65 @@
   </section>
 
   <!-- Reviews -->
-  <section id="reviews" class="py-12 text-white bg-blue-500">
+  <section id="reviews" class="py-12 text-white bg-blue-500 splide">
 
     <h1 class="text-2xl font-bold text-center uppercase">What people are saying</h1>
-    <ul class="flex w-full px-8 py-6 space-x-3 overflow-x-auto text-black md:px-12">
-      <li class="flex-shrink-0 px-5 py-8 transition bg-blue-300 rounded-lg hover:bg-blue-400 w-96">
-        <div class="flex items-center space-x-4 text-sm">
-          <img class="w-12 h-12 rounded-full"
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80">
-          <div>
-            <p>Tom cook</p>
-            <p>⭐️⭐️⭐️⭐️⭐️ 20 Minutes ago</p>
+    <div class="w-full px-8 py-6 text-black splide__track md:px-12">
+      <ul class="splide__list">
+        <li class="px-5 py-8 mr-4 transition bg-blue-300 rounded-lg splide__slide hover:bg-blue-400">
+          <div class="flex items-center space-x-4 text-sm">
+            <img class="w-12 h-12 rounded-full"
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80">
+            <div>
+              <p>Tom cook</p>
+              <p>⭐️⭐️⭐️⭐️⭐️ 20 Minutes ago</p>
+            </div>
           </div>
-        </div>
-        <p class="mt-4 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit temporibus nam
-          corporis? Ex, aspernatur totam minus eligendi in, hic quis aut ea, et voluptate fuga illo dolorum. Optio,
-          quod.</p>
-      </li>
-      <li class="flex-shrink-0 px-5 py-8 transition bg-blue-300 rounded-lg hover:bg-blue-400 w-96">
-        <div class="flex items-center space-x-4 text-sm">
-          <img class="w-12 h-12 rounded-full"
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80">
-          <div>
-            <p>Tom cook</p>
-            <p>⭐️⭐️⭐️⭐️⭐️ 20 Minutes ago</p>
+          <p class="mt-4 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit temporibus nam
+            corporis? Ex, aspernatur totam minus eligendi in, hic quis aut ea, et voluptate fuga illo dolorum. Optio,
+            quod.</p>
+        </li>
+        <li class="px-5 py-8 mr-4 transition bg-blue-300 rounded-lg splide__slide hover:bg-blue-400">
+          <div class="flex items-center space-x-4 text-sm">
+            <img class="w-12 h-12 rounded-full"
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80">
+            <div>
+              <p>Tom cook</p>
+              <p>⭐️⭐️⭐️⭐️⭐️ 20 Minutes ago</p>
+            </div>
           </div>
-        </div>
-        <p class="mt-4 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit temporibus nam
-          corporis? Ex, aspernatur totam minus eligendi in, hic quis aut ea, et voluptate fuga illo dolorum. Optio,
-          quod.</p>
-      </li>
-      <li class="flex-shrink-0 px-5 py-8 transition bg-blue-300 rounded-lg hover:bg-blue-400 w-96">
-        <div class="flex items-center space-x-4 text-sm">
-          <img class="w-12 h-12 rounded-full"
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80">
-          <div>
-            <p>Tom cook</p>
-            <p>⭐️⭐️⭐️⭐️⭐️ 20 Minutes ago</p>
+          <p class="mt-4 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit temporibus nam
+            corporis? Ex, aspernatur totam minus eligendi in, hic quis aut ea, et voluptate fuga illo dolorum. Optio,
+            quod.</p>
+        </li>
+        <li class="px-5 py-8 mr-4 transition bg-blue-300 rounded-lg splide__slide hover:bg-blue-400">
+          <div class="flex items-center space-x-4 text-sm">
+            <img class="w-12 h-12 rounded-full"
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80">
+            <div>
+              <p>Tom cook</p>
+              <p>⭐️⭐️⭐️⭐️⭐️ 20 Minutes ago</p>
+            </div>
           </div>
-        </div>
-        <p class="mt-4 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit temporibus nam
-          corporis? Ex, aspernatur totam minus eligendi in, hic quis aut ea, et voluptate fuga illo dolorum. Optio,
-          quod.</p>
-      </li>
-      <li class="flex-shrink-0 px-5 py-8 transition bg-blue-300 rounded-lg hover:bg-blue-400 w-96">
-        <div class="flex items-center space-x-4 text-sm">
-          <img class="w-12 h-12 rounded-full"
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80">
-          <div>
-            <p>Tom cook</p>
-            <p>⭐️⭐️⭐️⭐️⭐️ 20 Minutes ago</p>
+          <p class="mt-4 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit temporibus nam
+            corporis? Ex, aspernatur totam minus eligendi in, hic quis aut ea, et voluptate fuga illo dolorum. Optio,
+            quod.</p>
+        </li>
+        <li class="px-5 py-8 mr-4 transition bg-blue-300 rounded-lg splide__slide hover:bg-blue-400">
+          <div class="flex items-center space-x-4 text-sm">
+            <img class="w-12 h-12 rounded-full"
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80">
+            <div>
+              <p>Tom cook</p>
+              <p>⭐️⭐️⭐️⭐️⭐️ 20 Minutes ago</p>
+            </div>
           </div>
-        </div>
-        <p class="mt-4 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit temporibus nam
-          corporis? Ex, aspernatur totam minus eligendi in, hic quis aut ea, et voluptate fuga illo dolorum. Optio,
-          quod.</p>
-      </li>
-    </ul>
+          <p class="mt-4 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit temporibus nam
+            corporis? Ex, aspernatur totam minus eligendi in, hic quis aut ea, et voluptate fuga illo dolorum. Optio,
+            quod.</p>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <!-- Contact -->
@@ -303,7 +305,46 @@
           frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
       </div>
     </div>
+
+    <footer class="flex items-center justify-between px-12 py-12 text-gray-300 bg-black">
+      <p>&copy; 2021 by Precise Plans</p>
+      <p class="flex items-center space-x-2"><span>Powered by </span><img
+          src="https://www.softwarebuild.co.uk/img/SVGLogo.svg" alt="Software Build" class="w-24"></p>
+    </footer>
   </section>
+
+  <script>
+    const header = document.getElementById('header')
+
+    document.addEventListener('scroll', e => {
+      header.classList.toggle('isSticky', window.scrollY > 50)
+    });
+
+      (function () {
+        // your page initialization code here
+        // the DOM will be available here
+
+        new Splide('.splide', {
+          gap: 12,
+          perPage: 3,
+          perMove: 1,
+          rewind: true,
+          autoplay: true,
+          breakpoints: {
+            '640': {
+              perPage: 2,
+              gap: '1rem',
+            },
+            '480': {
+              perPage: 1,
+              gap: '1rem',
+            },
+          }
+        }).mount();
+      })();
+
+  </script>
+
 </body>
 
 </html>
